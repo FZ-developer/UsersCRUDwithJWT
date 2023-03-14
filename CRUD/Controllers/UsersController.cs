@@ -25,7 +25,7 @@ namespace UsersCRUD.Controllers
 
 
         [HttpGet("UsersList")]
-        [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme, Roles = "Admin")] 
+        [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme, Roles = "Admin, UserOnly")] 
         public ResponseDTO GetAllUsers()
         {
             return _userService.GetAllUsers();
